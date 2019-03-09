@@ -47,11 +47,13 @@ Compliance tattvas leads to improved lifestyle habits and physical and mental he
     <string name="h_nt">Next tattva:</string>
     <string name="tatvaEnd1">To end of this tatva remains</string>
     <string name="tatvaEnd2">To end of this tatva remains less than minute</string>
-    <string name="tat1">Akasa</string>
-    <string name="tat2">Wayu</string>
+    <string name="tat1">Akaza</string>
+    <string name="tat2">Vayu</string>
     <string name="tat3">Tejas</string>
     <string name="tat4">Prithivi</string>
     <string name="tat5">Apas</string>
+    <string name="tat6">Adi</string>
+    <string name="tat7">Samadhi</string>
     <string name="tab3">Today</string>
     <string name="tab4">Tomorrow</string>
     <string name="tab5">Tattvas for date</string>

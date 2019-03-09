@@ -17,7 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 
-public class SecondActivity extends Activity {
+public class TattvaActivity extends Activity {
 
     Timer timer = new Timer();
     private static boolean outOfDate = false;

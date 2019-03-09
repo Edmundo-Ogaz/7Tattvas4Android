@@ -1,18 +1,9 @@
 package com.example.myfirstapp;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.tomerrosenfeld.customanalogclockview.CustomAnalogClock;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void run() {
             MainActivity.this.finish();
-            MainActivity.this.startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            MainActivity.this.startActivity(new Intent(MainActivity.this, TattvaActivity.class));
         }
     }
 

@@ -1,7 +1,9 @@
 package com.example.myfirstapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -27,6 +29,26 @@ public class TattvasForDayActivity extends Activity {
                 default:
                     return;
             }
+        }
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.imageButton1:
+                finish();
+                startActivity(new Intent(this, TattvaActivity.class));
+                return;
+            case R.id.imageButton4:
+                /*finish();
+                startActivity(new Intent(this, Preferences.class));
+                return;*/
+            case R.id.imageButton5:
+                stopService(new Intent(this, ServiceActivity.class));
+                finish();
+                System.exit(0);
+                return;
+            default:
+                return;
         }
     }
 

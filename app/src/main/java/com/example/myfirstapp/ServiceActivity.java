@@ -279,9 +279,9 @@ public class ServiceActivity  extends Service {
             case 5:
                 return service.getResources().getString(R.string.tat5);
             case 6:
-                return service.getResources().getString(R.string.tat5);
+                return service.getResources().getString(R.string.tat6);
             case 7:
-                return service.getResources().getString(R.string.tat5);
+                return service.getResources().getString(R.string.tat7);
             default:
                 return "Náda";
         }
@@ -359,27 +359,37 @@ public class ServiceActivity  extends Service {
                 case 1:
                     tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat1)}));
                     tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv1[i].setImageResource(R.drawable.iv_01);
+                    //iv1[i].setImageResource(R.drawable.iv_01);
                     break;
                 case 2:
                     tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat2)}));
                     tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv1[i].setImageResource(R.drawable.iv_02);
+                    //iv1[i].setImageResource(R.drawable.iv_02);
                     break;
                 case 3:
                     tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat3)}));
                     tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv1[i].setImageResource(R.drawable.iv_03);
+                    //iv1[i].setImageResource(R.drawable.iv_03);
                     break;
                 case 4:
                     tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat4)}));
                     tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv1[i].setImageResource(R.drawable.iv_04);
+                    //iv1[i].setImageResource(R.drawable.iv_04);
                     break;
                 case 5:
                     tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat5)}));
                     tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv1[i].setImageResource(R.drawable.iv_05);
+                    //iv1[i].setImageResource(R.drawable.iv_05);
+                    break;
+                case 6:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat6)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_05);
+                    break;
+                case 7:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat7)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_05);
                     break;
             }
             iv1[i].setId(i);
@@ -403,7 +413,7 @@ public class ServiceActivity  extends Service {
             ll1[i].addView(tv1_2[i], new LayoutParams(-1, -2));
             ll1[i].setPadding(paddingForecast, 0, paddingForecast, 0);
             todayForecast.addView(ll1[i]);
-            if (j == 5) {
+            if (j == 7) {
                 j = 1;
             } else {
                 j++;
@@ -428,27 +438,27 @@ public class ServiceActivity  extends Service {
                 case 1:
                     tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat1)}));
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv2[i].setImageResource(R.drawable.iv_01);
+                    //iv2[i].setImageResource(R.drawable.iv_01);
                     break;
                 case 2:
                     tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat2)}));
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv2[i].setImageResource(R.drawable.iv_02);
+                    //iv2[i].setImageResource(R.drawable.iv_02);
                     break;
                 case 3:
                     tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat3)}));
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv2[i].setImageResource(R.drawable.iv_03);
+                    //iv2[i].setImageResource(R.drawable.iv_03);
                     break;
                 case 4:
                     tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat4)}));
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv2[i].setImageResource(R.drawable.iv_04);
+                    //iv2[i].setImageResource(R.drawable.iv_04);
                     break;
                 case 5:
                     tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat5)}));
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
-                    iv2[i].setImageResource(R.drawable.iv_05);
+                    //iv2[i].setImageResource(R.drawable.iv_05);
                     break;
             }
             iv2[i].setId(i);
