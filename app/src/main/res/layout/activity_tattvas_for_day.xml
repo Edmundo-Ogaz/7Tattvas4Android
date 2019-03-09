@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#5a5a5a" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TabHost android:id="@+id/tabhost" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="0dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TabWidget android:id="@android:id/tabs" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <FrameLayout android:id="@android:id/tabcontent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="52dp">
+                <RelativeLayout android:id="@+id/tab1_1" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ScrollView android:id="@+id/scrollView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/todaysForecast" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </ScrollView>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/tab1_2" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ScrollView android:id="@+id/ScrollView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/tomorrowsForecast" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </ScrollView>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/tab2" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ScrollView android:id="@+id/ScrollView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/dateForecast" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </ScrollView>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="0dp" android:layout_marginBottom="0dp" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:orientation="vertical" android:background="#0099cc" android:layout_width="match_parent" android:layout_height="52dp" android:layout_weight="25">
+            <FrameLayout android:background="#424242" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="0dp" android:layout_alignParentBottom="true">
+                <ImageButton android:layout_gravity="center" android:id="@+id/imageButton1" android:background="@android:color/transparent" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/menu_1" android:scaleType="fitXY" android:onClick="onClick"/>
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:background="#669900" android:layout_width="match_parent" android:layout_height="52dp" android:layout_weight="25">
+            <FrameLayout android:background="#99cc00" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="0dp" android:layout_alignParentBottom="true">
+                <ImageButton android:layout_gravity="center" android:id="@+id/imageButton2" android:background="@android:color/transparent" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/menu_2" android:scaleType="fitXY" android:onClick="onClick"/>
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:background="#9933cc" android:layout_width="match_parent" android:layout_height="52dp" android:layout_weight="25">
+            <FrameLayout android:background="#424242" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="0dp" android:layout_alignParentBottom="true">
+                <ImageButton android:layout_gravity="center" android:id="@+id/imageButton4" android:background="@android:color/transparent" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/menu_4" android:scaleType="fitXY" android:onClick="onClick"/>
+            </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:background="#cc0000" android:layout_width="match_parent" android:layout_height="52dp" android:layout_weight="25">
+            <FrameLayout android:background="#424242" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="0dp" android:layout_alignParentBottom="true">
+                <ImageButton android:layout_gravity="center" android:id="@+id/imageButton5" android:background="@android:color/transparent" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/menu_5" android:scaleType="fitXY" android:onClick="onClick"/>
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

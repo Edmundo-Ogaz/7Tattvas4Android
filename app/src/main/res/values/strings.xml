@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="app_ver">ver: 1.1b initial release</string>
+    <string name="app_copy">created by Daniel Horky - All rights reserved</string>
+    <string name="desc_title">What is tattva?</string>
+    <string name="desc">"Tattva is a Sanskrit word meaning ‘principle’, ‘reality’ or ‘truth’. According to various Indian schools of philosophy, a tattva is an element or aspect of reality conceived as an aspect of deity. Although the number of tattvas varies depending on the philosophical school, together they are thought to form the basis of all our experience.
+
+Day is divided into five basic tattvas and it starts with Akāśa on every sunrise. Pṛithvī - earth, Jala – water, Tejas – fire, Vāyu – air and Akāśa – ether. These Tattvas change regularly in two-hour cycle. This means that the duration of one Tattva is 24 minutes. Each Tattva has a different color, shape and other properties. In each tattva something is appropriate or inappropriate to do.
+
+Compliance tattvas leads to improved lifestyle habits and physical and mental health."</string>
+    <string name="desc_tat1_title">Ākāśa</string>
+    <string name="desc_tat1">"Favorable for meditation
+- Do not eat
+- Do not drink
+- Do not breastfeed
+- Refrain from conception
+- Do not enter into marriage
+- Do not enter into agreements"</string>
+    <string name="desc_tat2_title">Vāyu</string>
+    <string name="desc_tat2">"Suitable for traveling
+- Refrain from conception
+- Do not enter into marriage
+- The possibility of theft
+- There occurs of scams, murders and suicides"</string>
+    <string name="desc_tat3_title">Tejas</string>
+    <string name="desc_tat3">"Suitable for working
++ Training
++ Weight Loss
++ Physical development
++ Hardening
++ Eating
+- Do not expose to danger"</string>
+    <string name="desc_tat4_title">Prithvī</string>
+    <string name="desc_tat4">"Suitable to all event
++ Conclusion of contracts
++ Conclusion of marriages
++ New resolutions
++ Business
++ Quitting habits"</string>
+    <string name="desc_tat5_title">Apas (also Jala)</string>
+    <string name="desc_tat5">"Suitable for short-term goals
++ Conclusion of contracts
++ Stakes and financial objectives"</string>
+    <string name="h_sr">Sunrise:</string>
+    <string name="h_ss">Sunset:</string>
+    <string name="h_tt">Tattva:</string>
+    <string name="h_nt">Next tattva:</string>
+    <string name="tatvaEnd1">To end of this tatva remains</string>
+    <string name="tatvaEnd2">To end of this tatva remains less than minute</string>
+    <string name="tat1">Akasa</string>
+    <string name="tat2">Wayu</string>
+    <string name="tat3">Tejas</string>
+    <string name="tat4">Prithivi</string>
+    <string name="tat5">Apas</string>
+    <string name="tab3">Today</string>
+    <string name="tab4">Tomorrow</string>
+    <string name="tab5">Tattvas for date</string>
+    <string name="for1">Forecast for day:</string>
+    <string name="for2">Tattva:</string>
+    <string name="for3">Time:</string>
+</resources>
