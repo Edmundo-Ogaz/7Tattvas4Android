@@ -460,6 +460,16 @@ public class ServiceActivity  extends Service {
                     tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
                     //iv2[i].setImageResource(R.drawable.iv_05);
                     break;
+                case 6:
+                    tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat6)}));
+                    tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv2[i].setImageResource(R.drawable.iv_05);
+                    break;
+                case 7:
+                    tv2[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat7)}));
+                    tv2_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv2[i].setImageResource(R.drawable.iv_05);
+                    break;
             }
             iv2[i].setId(i);
             iv2[i].setAdjustViewBounds(true);
@@ -478,7 +488,7 @@ public class ServiceActivity  extends Service {
             ll2[i].addView(tv2_2[i], new LayoutParams(-1, -2));
             ll2[i].setPadding(paddingForecast, 0, paddingForecast, 0);
             tomorrowForecast.addView(ll2[i]);
-            if (j == 5) {
+            if (j == 7) {
                 j = 1;
             } else {
                 j++;
@@ -510,5 +520,142 @@ public class ServiceActivity  extends Service {
             return makeMinutes(makeSunRise(day, latitude, longitude)[0]);
         }
         return makeMinutes(makeSunRise(day + 1, latitude, longitude)[0]);
+    }
+
+    static LinearLayout dateForecast;
+
+    public static void fillForecastDay(Activity mActivity, int day, int month, int year) {
+        int k;
+        int paddingForecast = Integer.valueOf(PreferenceManager.getDefaultSharedPreferences(mActivity).getString("paddingFor", "40")).intValue();
+        dateForecast = (LinearLayout) mActivity.findViewById(R.id.dateForecast);
+        dateForecast.removeAllViews();
+        String format = "%1$-12s";
+        int minutesTime = countDay(day, month, year);
+        int j = 1;
+        TextView[] tv = new TextView[3];
+        for (k = 0; k < tv.length; k++) {
+            tv[k] = new TextView(mActivity);
+            tv[k].setTextSize(20.0f);
+            tv[k].setId(k + 1);
+        }
+        LinearLayout[] ll = new LinearLayout[2];
+        for (k = 0; k < ll.length; k++) {
+            ll[k] = new LinearLayout(mActivity);
+            ll[k].setOrientation(0);
+            ll[k].setGravity(17);
+            ll[k].setPadding(paddingForecast, 0, paddingForecast, 0);
+        }
+        tv[0].setGravity(3);
+        tv[0].setPadding(paddingForecast, 0, 0, 0);
+        tv[1].setGravity(3);
+        tv[1].setPadding(paddingForecast, 0, 0, 0);
+        tv[2].setGravity(5);
+        tv[0].setText(new StringBuilder(String.valueOf(mActivity.getResources().getString(R.string.for1))).append(" ").append(day).append(". ").append(month + 1).append(". ").append(year).toString());
+        tv[1].setText(mActivity.getResources().getString(R.string.for2));
+        tv[2].setText(mActivity.getResources().getString(R.string.for3));
+        ll[0].addView(tv[0]);
+        ll[1].addView(tv[1]);
+        ll[1].addView(tv[2], new LayoutParams(-1, -2));
+        dateForecast.addView(ll[0]);
+        dateForecast.addView(ll[1]);
+        ImageView[] iv1 = new ImageView[61];
+        TextView[] tv1 = new TextView[61];
+        TextView[] tv1_2 = new TextView[61];
+        LinearLayout[] ll1 = new LinearLayout[61];
+        for (int i = 1; i < 61; i++) {
+            ll1[i] = new LinearLayout(mActivity);
+            ll1[i].setOrientation(0);
+            ll1[i].setGravity(17);
+            tv1[i] = new TextView(mActivity);
+            tv1[i].setTextSize(20.0f);
+            tv1_2[i] = new TextView(mActivity);
+            tv1_2[i].setTextSize(20.0f);
+            iv1[i] = new ImageView(mActivity);
+            switch (j) {
+                case 1:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat1)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_01);
+                    break;
+                case 2:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat2)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_02);
+                    break;
+                case 3:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat3)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_03);
+                    break;
+                case 4:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat4)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_04);
+                    break;
+                case 5:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat5)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_05);
+                    break;
+                case 6:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat6)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_05);
+                    break;
+                case 7:
+                    tv1[i].setText(String.format(format, new Object[]{mActivity.getResources().getString(R.string.tat7)}));
+                    tv1_2[i].setText(new StringBuilder(String.valueOf(makeHodinyMinuty((((i * 23) + minutesTime) + (i * 1)) - 23))).append(" - ").append(makeHodinyMinuty(((i * 23) + minutesTime) + (i * 1))).toString());
+                    //iv1[i].setImageResource(R.drawable.iv_05);
+                    break;
+            }
+            iv1[i].setId(i);
+            iv1[i].setAdjustViewBounds(true);
+            if (paddingForecast == 40) {
+                iv1[i].setMaxHeight(25);
+            } else {
+                iv1[i].setMaxWidth(50);
+            }
+            tv1[i].setId(i);
+            tv1[i].setGravity(3);
+            tv1[i].setPadding(paddingForecast, 0, 0, 0);
+            tv1_2[i].setId(i);
+            tv1_2[i].setGravity(5);
+            ll1[i].addView(iv1[i]);
+            ll1[i].addView(tv1[i]);
+            ll1[i].addView(tv1_2[i], new LayoutParams(-1, -2));
+            ll1[i].setPadding(paddingForecast, 0, paddingForecast, 0);
+            dateForecast.addView(ll1[i]);
+            if (j == 7) {
+                j = 1;
+            } else {
+                j++;
+            }
+        }
+    }
+
+    public static int countDay(int day, int month, int year) {
+        return makeMinutes(countSunRise(day, month, year, latitude, longitude)[0]);
+    }
+
+    public static double[] countSunRise(int day, int month, int year, double latitude, double longitude) {
+        Calendar cal = Calendar.getInstance();
+        Date date = cal.getTime();
+        int timeZone = ((cal.getTimeZone().getOffset(date.getTime()) / 1000) / 60) / 60;
+        month++;
+        int a = (14 - month) / 12;
+        int y = (year + 4800) - a;
+        double Jc = (((((double) ((((((((((((a * 12) + month) - 3) * 153) + 2) / 5) + day) + (y * 365)) + (y / 4)) - (y / 100)) + (y / 400)) - 32045)) + 0.5d) - ((double) (timeZone / 24))) - 2451545.0d) / 36525.0d;
+        double Geom1 = (280.46646d + ((36000.76983d + (3.032E-4d * Jc)) * Jc)) % 360.0d;
+        double Geom2 = 357.52911d + ((35999.05029d - (1.537E-4d * Jc)) * Jc);
+        double EarthOr = 0.016708634d - ((4.2037E-5d + (1.267E-7d * Jc)) * Jc);
+        double ObbCorr = (23.0d + ((26.0d + ((21.448d - ((46.815d + ((5.9E-4d - (0.001813d * Jc)) * Jc)) * Jc)) / 60.0d)) / 60.0d)) + (0.00256d * Math.cos(Math.toRadians(125.04d - (1934.136d * Jc))));
+        double SunDec = Math.toDegrees(Math.asin(Math.sin(Math.toRadians(ObbCorr)) * Math.sin(Math.toRadians(((Geom1 + (((Math.sin(Math.toRadians(Geom2)) * (1.914602d - ((0.004817d + (1.4E-5d * Jc)) * Jc))) + (Math.sin(Math.toRadians(2.0d * Geom2)) * (0.019993d - (1.01E-4d * Jc)))) + (Math.sin(Math.toRadians(3.0d * Geom2)) * 2.89E-4d))) - 0.00569d) - (0.00478d * Math.sin(Math.toRadians(125.04d - (1934.136d * Jc))))))));
+        double VarY = Math.tan(Math.toRadians(ObbCorr / 2.0d)) * Math.tan(Math.toRadians(ObbCorr / 2.0d));
+        double TimeEq = 4.0d * Math.toDegrees(((((Math.sin(2.0d * Math.toRadians(Geom1)) * VarY) - ((2.0d * EarthOr) * Math.sin(Math.toRadians(Geom2)))) + ((((4.0d * EarthOr) * VarY) * Math.sin(Math.toRadians(Geom2))) * Math.cos(2.0d * Math.toRadians(Geom1)))) - (((0.5d * VarY) * VarY) * Math.sin(4.0d * Math.toRadians(Geom1)))) - (((1.25d * EarthOr) * EarthOr) * Math.sin(2.0d * Math.toRadians(Geom2))));
+        double HASun = Math.toDegrees(Math.acos((Math.cos(Math.toRadians(90.833d)) / (Math.cos(Math.toRadians(latitude)) * Math.cos(Math.toRadians(SunDec)))) - (Math.tan(Math.toRadians(latitude)) * Math.tan(Math.toRadians(SunDec)))));
+        double SolarNoon = (((720.0d - (4.0d * longitude)) - TimeEq) + ((double) (timeZone * 60))) / 1440.0d;
+        double SecRise = ((24.0d * (SolarNoon - ((4.0d * HASun) / 1440.0d))) * 60.0d) * 60.0d;
+        double SecSet = ((24.0d * (SolarNoon + ((4.0d * HASun) / 1440.0d))) * 60.0d) * 60.0d;
+        return new double[]{SecRise, SecSet};
     }
 }

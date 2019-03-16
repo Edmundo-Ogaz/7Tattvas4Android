@@ -1,14 +1,19 @@
 package com.example.myfirstapp;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabWidget;
+
+import java.util.Calendar;
 
 public class TattvasForDayActivity extends Activity {
 
@@ -49,6 +54,34 @@ public class TattvasForDayActivity extends Activity {
                 return;
             default:
                 return;
+        }
+    }
+
+    private DatePickerDialog.OnDateSetListener datePickerListener = new C00001();
+    private int day;
+    private int month;
+    private int year;
+
+    class C00001 implements DatePickerDialog.OnDateSetListener {
+        C00001() {
+        }
+
+        public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
+            System.out.println(new StringBuilder(String.valueOf(selectedDay)).append(" ").append(selectedMonth).append(" ").append(selectedYear).toString());
+            ServiceActivity.fillForecastDay(TattvasForDayActivity.activity, selectedDay, selectedMonth, selectedYear);
+        }
+    }
+
+    protected Dialog onCreateDialog(int id) {
+        Calendar c = Calendar.getInstance();
+        this.year = c.get(1);
+        this.month = c.get(2);
+        this.day = c.get(5);
+        switch (id) {
+            case DATE_DIALOG_ID /*999*/:
+                return new DatePickerDialog(this, this.datePickerListener, this.year, this.month, this.day);
+            default:
+                return null;
         }
     }
 
