@@ -31,11 +31,11 @@ public class TattvaActivity extends Activity {
                 startActivity(new Intent(this, TattvasForDayActivity.class));
                 return;
             case R.id.imageButton4:
-                /*this.timer.cancel();
+                this.timer.cancel();
                 outOfDate = true;
                 finish();
-                startActivity(new Intent(this, Preferences.class));
-                return;*/
+                startActivity(new Intent(this, SettingsActivity.class));
+                return;
             case R.id.imageButton5:
                 stopService(new Intent(this, ServiceActivity.class));
                 this.timer.cancel();

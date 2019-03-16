@@ -44,9 +44,9 @@ public class TattvasForDayActivity extends Activity {
                 startActivity(new Intent(this, TattvaActivity.class));
                 return;
             case R.id.imageButton4:
-                /*finish();
-                startActivity(new Intent(this, Preferences.class));
-                return;*/
+                finish();
+                startActivity(new Intent(this, SettingsActivity.class));
+                return;
             case R.id.imageButton5:
                 stopService(new Intent(this, ServiceActivity.class));
                 finish();

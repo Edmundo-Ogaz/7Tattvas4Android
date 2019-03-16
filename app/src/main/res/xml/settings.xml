@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_category1">
+        <ListPreference android:entries="@array/updateFreq" android:title="@string/pref_freq" android:key="UpdateFreq" android:summary="@string/pref_freq_more" android:defaultValue="15" android:entryValues="@array/updateFreqValues" />
+        <CheckBoxPreference android:title="@string/pref_circle" android:key="show_circle" android:summary="@string/pref_circle_more" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category2">
+        <ListPreference android:entries="@array/forecastDisp" android:title="@string/pref_view" android:key="paddingFor" android:summary="@string/pref_view_more" android:defaultValue="10" android:entryValues="@array/forecastDispValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category3">
+        <CheckBoxPreference android:title="@string/pref_gps" android:key="PrefGps" android:summary="@string/pref_gps_summary" android:defaultValue="false" />
+        <EditTextPreference android:title="@string/pref_gps_latitude" android:key="PrefLatitude" android:summary="@string/pref_gps_latitude_summary" android:defaultValue="0.0" android:inputType="numberDecimal" />
+        <EditTextPreference android:title="@string/pref_gps_longitude" android:key="PrefLongitude" android:summary="@string/pref_gps_longitude_summary" android:defaultValue="0.0" android:inputType="numberDecimal" />
+    </PreferenceCategory>
+</PreferenceScreen>

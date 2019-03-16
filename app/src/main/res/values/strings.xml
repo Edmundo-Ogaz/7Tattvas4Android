@@ -60,4 +60,29 @@ Compliance tattvas leads to improved lifestyle habits and physical and mental he
     <string name="for1">Forecast for day:</string>
     <string name="for2">Tattva:</string>
     <string name="for3">Time:</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_category1">Main screen</string>
+    <string name="pref_category2">Forecast screen</string>
+    <string name="pref_category3">Location</string>
+    <string name="pref_view">Forecast interface</string>
+    <string name="pref_view_more">if you have a problem with display of forecast, please select compact</string>
+    <string name="pref_freq">Update frequency</string>
+    <string name="pref_freq_more">set speed of updates on main screen</string>
+    <string name="pref_circle">Show next Tattva</string>
+    <string name="pref_circle_more">show/hide next Tattva circle in clock</string>
+    <string name="pref_internet_time">Use Internet time</string>
+    <string name="pref_internet_time_summary">Better data - require internet connection</string>
+    <string name="pref_gps">Use own location</string>
+    <string name="pref_gps_summary">set your own location</string>
+    <string name="pref_gps_latitude">Latitude</string>
+    <string name="pref_gps_latitude_summary">write latitude here</string>
+    <string name="pref_gps_longitude">Longitude</string>
+    <string name="pref_gps_longitude_summary">write longitude here</string>
+
+    <string name="w_change">Changed - restart of application is required!</string>
+
+    <string name="inv_latitude">Latitude must be in range of -90 to 90</string>
+    <string name="inv_longitude">Longitude must be in range of -180 to 180</string>
 </resources>
