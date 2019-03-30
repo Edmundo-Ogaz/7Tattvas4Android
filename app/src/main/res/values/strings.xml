@@ -66,6 +66,7 @@ Compliance tattvas leads to improved lifestyle habits and physical and mental he
     <string name="pref_category1">Main screen</string>
     <string name="pref_category2">Forecast screen</string>
     <string name="pref_category3">Location</string>
+    <string name="pref_category4">Time</string>
     <string name="pref_view">Forecast interface</string>
     <string name="pref_view_more">if you have a problem with display of forecast, please select compact</string>
     <string name="pref_freq">Update frequency</string>
@@ -81,8 +82,13 @@ Compliance tattvas leads to improved lifestyle habits and physical and mental he
     <string name="pref_gps_longitude">Longitude</string>
     <string name="pref_gps_longitude_summary">write longitude here</string>
 
+    <string name="pref_time_difference">minute</string>
+    <string name="pref_time_difference_summary">time difference</string>
+
     <string name="w_change">Changed - restart of application is required!</string>
 
     <string name="inv_latitude">Latitude must be in range of -90 to 90</string>
     <string name="inv_longitude">Longitude must be in range of -180 to 180</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

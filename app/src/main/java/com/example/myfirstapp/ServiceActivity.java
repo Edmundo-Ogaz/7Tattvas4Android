@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import android.app.Activity;
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
@@ -19,6 +20,10 @@ public class ServiceActivity  extends Service {
     static Service service;
     static double latitude;
     static double longitude;
+    static double settingsLatitude;
+    static double settingsLongitude;
+    static boolean useLocation;
+    static int settingsTimeDifference;
 
     public IBinder onBind(Intent intent) {
         return null;
@@ -26,11 +31,34 @@ public class ServiceActivity  extends Service {
 
     public void onCreate() {
         System.out.println("Service online");
+        //gps = new GPSTracker(this);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        useLocation = sharedPrefs.getBoolean("PrefGps", false);
+        settingsLatitude = Double.parseDouble(sharedPrefs.getString("PrefLatitude", "0.0"));
+        settingsLongitude = Double.parseDouble(sharedPrefs.getString("PrefLongitude", "0.0"));
+        settingsTimeDifference = Integer.parseInt(sharedPrefs.getString("PrefTimeDifference", "0"));
         service = this;
+        startGPS(useLocation, settingsLatitude, settingsLongitude);
 
-        latitude = -33.444215;
-        longitude = -70.633427;
+    }
 
+    private void startGPS(boolean useLocation, double settingsLatitude, double settingsLongitude) {
+        if (useLocation) {
+            System.out.println("use location preference!");
+            System.out.println("settingsLatitude: " + settingsLatitude);
+            System.out.println("settingsLongitude: " + settingsLongitude);
+            latitude = settingsLatitude;
+            longitude = settingsLongitude;
+        /*} else if (gps.canGetLocation()) {
+            gps.getLocation();
+            latitude = gps.getLatitude();
+            longitude = gps.getLongitude();*/
+        } else {
+            System.out.println("use location app!");
+            //gpsError = true;
+            latitude = -33.444215;
+            longitude = -70.633427;
+        }
     }
 
     static boolean showCircle;
@@ -51,6 +79,9 @@ public class ServiceActivity  extends Service {
         showCircle = PreferenceManager.getDefaultSharedPreferences(mActivity).getBoolean("show_circle", true);
 
         Calendar cal = Calendar.getInstance();
+        System.out.println("settings time difference: " + settingsTimeDifference);
+        cal.add(Calendar.MINUTE, settingsTimeDifference);
+        System.out.println("time: " + cal.getTime());
         int day = cal.get(Calendar.DATE);
 
         double SecRise = makeSunRise(day, latitude, longitude)[0];
